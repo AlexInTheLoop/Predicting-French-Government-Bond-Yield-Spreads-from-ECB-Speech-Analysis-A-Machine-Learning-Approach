@@ -16,11 +16,6 @@ class BaseModel:
 
     def evaluate(self, X, y, average="macro", labels=None, output_dict=False):
         y_pred = self.predict(X)
-        y_proba = None
-        try:
-            y_proba = self.predict_proba(X)
-        except Exception:
-            pass
         return compute_all_metrics(y, y_pred, average=average, labels=labels, output_dict=output_dict)
 
     def save(self, path):

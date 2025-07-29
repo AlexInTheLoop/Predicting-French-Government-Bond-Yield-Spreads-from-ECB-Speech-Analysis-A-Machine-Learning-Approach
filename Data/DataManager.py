@@ -96,7 +96,6 @@ class DataManager:
 
         self.final_df = pd.DataFrame(out_rows).set_index("date").sort_index()
 
-
     def export_dataset(self):
         if self.final_df.empty:
             raise ValueError("The final dataset is empty.")

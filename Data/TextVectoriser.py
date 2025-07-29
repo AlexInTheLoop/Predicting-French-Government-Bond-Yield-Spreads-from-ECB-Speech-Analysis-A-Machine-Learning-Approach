@@ -1,7 +1,6 @@
 import pandas as pd
-import numpy as np
 
-from scipy.sparse import hstack, csr_matrix, issparse
+from scipy.sparse import hstack, issparse
 
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer, HashingVectorizer
 from sklearn.preprocessing import StandardScaler
